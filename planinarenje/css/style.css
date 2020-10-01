@@ -16,3 +16,47 @@
     padding: 0;
     box-sizing: border-box;
 }
+body {
+    background-image: linear-gradient(rgba(104, 133, 98,.7), rgba(104, 133, 98,.7)), url(../img/bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    font-family: var(--font);
+}
+a {
+    text-decoration: none;
+}
+a:hover {
+    transition: var(--transition);
+}
+/*****************
+topBar
+*****************/
+.topBar {
+    max-width: 1140px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.7rem;
+}
+.logo {
+    font-weight: 800;
+}
+.topBar p {
+    color: var(--lightGreen);
+}
+.topBar a {
+    color: var(--white);
+}
+.topBar a:hover {
+    color: var(--lightGreen);
+}
+
+
+
+
+
+
+
+
