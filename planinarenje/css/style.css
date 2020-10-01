@@ -10,6 +10,7 @@
     --fontSize: 16px;
     --font: 'Raleway', sans-serif;
     --transition: .3s ease;
+    --py: 60px 0;
 }
 * {
     margin: 0;
@@ -23,11 +24,26 @@ body {
     background-size: cover;
     background-attachment: fixed;
     font-family: var(--font);
+    margin: 100px 0;
 }
 a {
     text-decoration: none;
 }
 a:hover {
+    transition: var(--transition);
+}
+button  {
+    padding: 15px 30px;
+    font-size: 1rem;
+    text-transform: uppercase;
+    border-radius: 30px;
+    border: none;
+    background: var(--lightGreen);
+    margin-top: 20px;
+}
+button:hover {
+    background: var(--white);
+    cursor: pointer;
     transition: var(--transition);
 }
 /*****************
@@ -52,11 +68,80 @@ topBar
 .topBar a:hover {
     color: var(--lightGreen);
 }
-
-
-
-
-
+/*****************
+main
+*****************/
+main {
+    max-width: 1140px;
+    margin: auto;
+}
+/*****************
+uvod
+*****************/
+.uvod {
+    display: flex;
+    color: var(--white);
+    margin-top: 50px;
+}
+.uvod article:first-child {
+    flex: 0 0 40%;
+}
+.uvod article:first-child div:first-child {
+    background: var(--darkGreen);
+}
+.uvod article:first-child div:last-child {
+    background: var(--blue);
+}
+.uvod div {
+    padding: 50px;
+    font-size: 1.2rem;
+}
+.uvod article:last-child {
+    flex: 0 0 60%;
+    background-image: url(../img/uvod.jpg);
+    background-position: center;
+    background-size: cover;
+}
+.uvod h2 {
+    margin-bottom: 20px;
+}
+/*****************
+info
+*****************/
+.info {
+    background: var(--white);
+    text-align: center;
+    padding: var(--py);
+}
+.info .row:first-child {
+    padding-bottom: 50px;
+}
+.info .row:last-child {
+    display: flex;
+}
+.info .row:last-child div {
+    flex: 1;
+    border-right: 1px solid var(--gray);
+}
+.info .row:last-child div:last-child {
+    border: none;
+}
+.info .fa-camera-retro {
+    color: var(--lightGreen);
+}
+.info .fa-envelope {
+    color: var(--darkGreen);
+}
+.info .fa-phone {
+    color: var(--blue);
+}
+.info i {
+    font-size: 2rem;
+    border: 1px solid var(--gray);
+    padding: 20px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
 
 
 
