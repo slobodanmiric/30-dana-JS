@@ -85,6 +85,7 @@ uvod
 *****************/
 .uvod {
     display: flex;
+    flex-wrap: wrap;
     color: var(--white);
     margin-top: 50px;
 }
@@ -123,6 +124,7 @@ info
 }
 .info .row:last-child {
     display: flex;
+    flex-wrap: wrap;
 }
 .info .row:last-child div {
     flex: 1;
@@ -171,6 +173,7 @@ programi
 }
 .programi article {
     display: flex;
+    flex-wrap: wrap;
 }
 .programi article div {
     flex: 0 0 50%;
@@ -235,5 +238,57 @@ footer h2 {
 /*****************
 responsive
 *****************/
+@media(max-width: 768px) {
+    body {
+        padding: 20px;
+        margin: 25px 0;
+    }
+    .topBar {
+        flex-direction: column;
+        align-items: center;
+    }
+    .uvod article:first-child {
+        flex: 0 0 100%;
+    }
+    .uvod article:last-child {
+        flex: 0 0 100%;
+        height: 300px;
+    }
+    .uvod div {
+        padding: 20px;
+        font-size: 1rem;
+    }
+    .info .row:last-child div {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+    .programi article div {
+        flex: 0 0 100%;
+    }
+    .programi .slika1,
+    .programi .slika2 {
+        height: 250px;
+    }
+    .programi {
+        padding: 20px;
+    }
+    .programi .slika1 {
+        order: -1;
+    }
+    button {
+        font-size: .8rem;
+    }
+    input[type="email"] {
+        width: 160px;
+    }
+    .info .row:last-child div {
+        border: none;
+    }
+}
+
+
+
+
+
 
 
