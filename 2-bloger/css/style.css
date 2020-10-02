@@ -136,6 +136,13 @@ blog
     border: 2px solid var(--white);
     color: var(--white);
 }
+/******************
+slider
+******************/
+.slider {
+    background: var(--orange);
+    padding: 50px 50px 0px 50px;
+}
 
 
 
