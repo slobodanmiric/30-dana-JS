@@ -188,10 +188,53 @@ footer article:last-child div {
     padding-bottom: 20px;
     font-size: 1.2rem;
 }
+footer article:last-child div:last-child {
+    border: none;
+}
 footer i {
     color: var(--tirkiz);
 }
-
+/******************
+responsive
+******************/
+@media(max-width: 768px) {
+    header h1 {
+        font-size: 2.5rem;
+    }
+    header {
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+        height: 70vh;
+    }
+    .blog article:nth-child(odd),
+    .blog article:nth-child(even),
+    footer input,
+    footer article:first-child,
+    footer article:last-child{
+        flex: 0 0 100%;
+    }
+    .blog article {
+        padding: 20px;
+        align-items: center;
+        text-align: center;
+    }
+    .blog h2 {
+        font-size: 2.5rem;
+    }
+    .slider {
+        padding: 50px 50px 20px 50px;
+    }
+    form {
+        margin-bottom: 50px;
+    }
+    footer button {
+        width: 100%;
+    }
+    footer article:last-child div {
+        text-align: center;
+    }
+}
 
 
 
