@@ -95,21 +95,27 @@ blog
 }
 .blog article:nth-child(1) {
     background-image: linear-gradient(rgba(0, 206, 201,.8),rgba(0, 206, 201,.8)), url(../img/musika.jpg);
+    order: 1;
 }
 .blog article:nth-child(2) {
     background-image: linear-gradient(rgba(162, 155, 254,.8),rgba(162, 155, 254,.8)),url(../img/knjige.jpg);
+    order: 2;
 }
 .blog article:nth-child(3) {
     background-image: linear-gradient(rgba(255, 118, 117,.8),rgba(255, 118, 117,.8)),url(../img/roleri.jpg);
+    order: 4;
 }
 .blog article:nth-child(4) {
     background-image: linear-gradient(rgba(253, 203, 110,.8),rgba(253, 203, 110,.8)),url(../img/planinarenje.jpg);
+    order: 3;
 }
 .blog article:nth-child(5) {
     background-image: linear-gradient(rgba(116, 185, 255,.8),rgba(116, 185, 255,.8)),url(../img/planinarenje.jpg);
+    order: 5;
 }
 .blog article:nth-child(6) {
     background-image: linear-gradient(rgba(0, 184, 148,.8),rgba(0, 184, 148,.8)),url(../img/web-dizajn.jpg);
+    order: 6;
 }
 .blog h2 {
     font-size: 3rem;
