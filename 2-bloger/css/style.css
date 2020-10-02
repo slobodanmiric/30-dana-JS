@@ -19,6 +19,54 @@
     padding: 0;
     box-sizing: border-box;
 }
-body {
+body { 
     font-family: var(--fontFamily);
 }
+button {
+    border: 2px solid var(--tirkiz);
+    background: transparent;
+    padding: 10px 30px;
+    color: var(--tirkiz);
+    font-size: 1rem;
+    text-transform: uppercase;
+}
+button:hover {
+    border: 2px solid var(--white);
+    color: var(--white);
+    cursor: pointer;
+    transition: var(--transition);
+}
+/******************
+header
+******************/
+header {
+    background-image: linear-gradient(rgba(45, 52, 54,.8),rgba(45, 52, 54,.8)), url(../img/blogger-header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 80vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    color: var(--white);
+    padding-right: 40px;
+}
+header h1 {
+    font-size: 4rem;
+    font-weight: 700;
+}
+header hr {
+    height: 3px;
+    width: 20%;
+    background: var(--white);
+    border: none;
+    margin-top: 20px;
+}
+header p {
+    font-size: 1.3rem;
+    padding: 20px 0;
+}
+
+
+
+
