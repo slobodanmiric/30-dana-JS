@@ -141,10 +141,56 @@ slider
 ******************/
 .slider {
     background: var(--orange);
-    padding: 50px 50px 0px 50px;
+    padding: 50px 50px 20px 50px;
+}
+/******************
+footer
+******************/
+footer {
+    padding: 50px;
+    background: var(--darkGray);
+    color: var(--lightGray);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+footer article:first-child {
+    flex: 0 0 60%;
+}
+footer article:last-child {
+    flex: 0 0 35%;
+}
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+form input,
+form textarea {
+    padding: 10px;
+    background: transparent;
+    margin-bottom: 10px;
+    border: 1px solid rgba(255,255,255,.2);
+    color: var(--lightGray);
+    font-size: 1rem;
+    font-family: sans-serif;
 }
 
-
+form input {
+    flex: 0 0 48%;
+}
+form textarea {
+    flex: 0 0 100%;
+}
+footer article:last-child div {
+    line-height: 2;
+    border-bottom: 1px solid rgba(255,255,255,.2);
+    padding-bottom: 20px;
+    font-size: 1.2rem;
+}
+footer i {
+    color: var(--tirkiz);
+}
 
 
 
