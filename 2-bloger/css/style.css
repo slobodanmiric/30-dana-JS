@@ -1,0 +1,24 @@
+/*https://templated.co/p/3781153616677876*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700&display=swap');
+:root {
+    --tirkiz: #00cec9;    /* rgb(0, 206, 201) */
+    --violet: #a29bfe;    /* rgb(162, 155, 254) */
+    --red: #ff7675;       /* rgb(255, 118, 117) */
+    --orange: #fdcb6e;    /* rgb(253, 203, 110) */
+    --blue: #74b9ff;      /* rgb(116, 185, 255) */
+    --green: #00b894;     /* rgb(0, 184, 148) */
+    --darkGray: #2d3436;  /* rgb(45, 52, 54) */
+    --white: #fff;
+    --lightGray: #f8f8f8;
+    --fontFamily: 'Source Sans Pro', sans-serif;
+    --fontSize: 16px;
+    --transition: .3s ease;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: var(--fontFamily);
+}
