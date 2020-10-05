@@ -11,8 +11,23 @@ $transition: .3s ease;
 $textShadow: 0 0 2px $primary;
 @mixin flexCenter {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
+}
+@mixin btn {
+    padding: 15px 30px;
+    border: none;
+    background: $accents;
+    font-size: 1rem;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    &:hover {
+        background: $primary;
+        cursor: pointer;
+        transition: $transition;
+        color: $white;
+    }
 }
 * {
     margin: 0;
@@ -45,6 +60,7 @@ topBar
     padding: 5px 0;
     .container {
         @include flexCenter;
+        justify-content: space-between;
         .logo {
             font-size: 2rem;
             color: $accents;
@@ -85,6 +101,47 @@ nav {
         }
     }
 }
+/*******************
+header
+*******************/
+header {
+    background-image: url(../img/header.jpg);
+    background-position: center;
+    background-size: cover;
+    height: 85vh;
+    @include flexCenter;
+    .box {
+        background: rgba($secondary, 0.7);
+        padding: 40px;
+        border: 1px solid $gray;
+        color: $white;
+        text-align: center;
+        h1 {
+            font-size: 3rem;
+            text-shadow: $textShadow;
+        }
+        h4 {
+            font-weight: 300;
+            font-size: 1.5rem;
+        }
+        button {
+            @include btn;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
