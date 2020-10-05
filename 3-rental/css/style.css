@@ -168,4 +168,37 @@ izdvojeno
   background: #27ae60;
 }
 
+/*******************
+benefiti
+*******************/
+.benefiti {
+  display: flex;
+  flex-wrap: wrap;
+}
+.benefiti article {
+  flex: 0 0 50%;
+  background: #e9ecef;
+}
+.benefiti article:nth-child(1),
+.benefiti article:nth-child(4) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 50px;
+  justify-content: center;
+}
+.benefiti article:nth-child(2) {
+  background-image: url(../img/benefiti1.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+}
+.benefiti article:nth-child(3) {
+  background-image: url(../img/benefiti2.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 50vh;
+}
+
 /*# sourceMappingURL=style.css.map */

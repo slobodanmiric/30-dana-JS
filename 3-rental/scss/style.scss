@@ -177,7 +177,36 @@ izdvojeno
         }
     }
 }
-
+/*******************
+benefiti
+*******************/
+.benefiti {
+    display: flex;
+    flex-wrap: wrap;
+    article {
+        flex: 0 0 50%;
+        background: $gray;
+    }
+    article:nth-child(1),
+    article:nth-child(4){
+        @include flexCenter;
+        flex-direction: column;
+        padding: 50px;
+        justify-content: center;
+    }
+    article:nth-child(2) {
+        background-image: url(../img/benefiti1.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 50vh;
+    }
+    article:nth-child(3) {
+        background-image: url(../img/benefiti2.jpg);
+        background-position: center;
+        background-size: cover;
+        height: 50vh;
+    }
+}
 
 
 
