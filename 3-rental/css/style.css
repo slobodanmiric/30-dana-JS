@@ -142,4 +142,30 @@ onama
   text-shadow: 0 0 2px #2c3e50;
 }
 
+/*******************
+izdvojeno
+*******************/
+.izdvojeno {
+  display: flex;
+  flex-wrap: wrap;
+}
+.izdvojeno article {
+  flex: 1;
+  background: linear-gradient(to right, #f1c40f, #e9ecef);
+}
+.izdvojeno article img {
+  width: 100%;
+}
+.izdvojeno article div {
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+}
+.izdvojeno article:nth-child(odd) div {
+  background: #2c3e50;
+}
+.izdvojeno article:nth-child(even) div {
+  background: #27ae60;
+}
+
 /*# sourceMappingURL=style.css.map */

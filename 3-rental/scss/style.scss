@@ -148,11 +148,35 @@ onama
         text-shadow: $textShadow;
     }
 }
-
-
-
-
-
+/*******************
+izdvojeno
+*******************/
+.izdvojeno {
+    display: flex;
+    flex-wrap: wrap;
+    article {
+        flex: 1;
+        background: linear-gradient(to right, $accents, $gray);
+        img {
+            width: 100%;
+        }
+        div {
+            padding: 20px;
+            text-align: center;
+            color: $white;
+        }
+    }
+    article:nth-child(odd) {
+        div {
+            background: $primary;
+        }
+    }
+    article:nth-child(even) {
+        div {
+            background: $secondary;
+        }
+    }
+}
 
 
 
