@@ -129,6 +129,25 @@ header {
         }
     }
 }
+/*******************
+onama
+*******************/
+.onama {
+    background-image: linear-gradient(rgba($tertiary, 0.7), rgba($secondary, 0.7)), url(../img/onama.jpg);
+    background-position: center bottom;
+    background-size: cover;
+    height: 60vh;
+    @include flexCenter;
+    text-align: center;
+    color: $white;
+    h2 {
+        font-size: 3rem;
+        text-shadow: $textShadow;
+    }
+    p {
+        text-shadow: $textShadow;
+    }
+}
 
 
 

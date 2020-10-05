@@ -120,4 +120,26 @@ header .box button:hover {
   color: #fff;
 }
 
+/*******************
+onama
+*******************/
+.onama {
+  background-image: linear-gradient(rgba(74, 147, 117, 0.7), rgba(39, 174, 96, 0.7)), url(../img/onama.jpg);
+  background-position: center bottom;
+  background-size: cover;
+  height: 60vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #fff;
+}
+.onama h2 {
+  font-size: 3rem;
+  text-shadow: 0 0 2px #2c3e50;
+}
+.onama p {
+  text-shadow: 0 0 2px #2c3e50;
+}
+
 /*# sourceMappingURL=style.css.map */
