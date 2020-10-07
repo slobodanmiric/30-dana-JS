@@ -214,6 +214,7 @@ benefiti
     article {
         flex: 0 0 50%;
         background: $gray;
+        height: 50vh;
         @media(max-width: 768px) {
             flex: 0 0 100%;
         }
@@ -232,7 +233,6 @@ benefiti
         background-image: url(../img/benefiti1.jpg);
         background-position: center;
         background-size: cover;
-        height: 50vh;
         @media(max-width: 768px) {
             order: -1;
         }
@@ -241,7 +241,6 @@ benefiti
         background-image: url(../img/benefiti2.jpg);
         background-position: center;
         background-size: cover;
-        height: 50vh;
     }
 }
 /*******************

@@ -1,0 +1,354 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+$fontFamily: 'Roboto', sans-serif;
+$black: #081624;
+$darkBlue: #0c062e;
+$pink: #501755;
+$violet: #2d1854;
+$accents: #b41aab;
+$lightGray: #9190a5;
+$white: #fff;
+$fontSize: 16px;
+$transition: .3s ease;
+$padding: 80px 0;
+@mixin bgImg($bg-position, $bg-size, $bg-repeat, $height) {
+    background-position: $bg-position;
+    background-size: $bg-size;
+    background-repeat: $bg-repeat;
+    height: $height;
+}
+@mixin flex($justify, $align) {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+}
+@mixin btn {
+    padding: 15px 30px;
+    background: $white;
+    color: $pink;
+    box-shadow: 10px 10px $accents;
+    border: none;
+    text-transform: uppercase;
+    font-size: .8rem;
+    font-style: italic;
+    margin-top: 30px;
+    &:hover {
+        box-shadow: 10px 10px $pink;
+        cursor: pointer;
+        transition: $transition;
+    }
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    line-height: 1.7;
+    color: $white;
+}
+.container {
+    width: 70%;
+    margin: auto;
+    @media(max-width: 768px) {
+        width: 90%;
+    }
+}
+a {
+    text-decoration: none;
+    &:hover {
+        transition: $transition;
+    }
+}
+.bars {
+    padding: 20px 0;
+    @include flex(flex-end, center);
+    color: $lightGray;
+    @media(max-width: 768px) {
+        @include flex(center, center);
+    }
+    a {
+        color: $lightGray;
+        margin-left: 10px;
+        &:hover {
+            color: $accents;
+        }
+    }
+}
+.liste {
+    @include flex(space-between, center);
+    li {
+        list-style: none;
+        a {
+            color: $white;
+            margin-left: 50px;
+            @media(max-width: 768px) {
+                margin: 10px;
+            }
+            &:hover {
+                color: $accents;
+            }
+        }
+    }
+}
+.logo {
+    color: $white;
+    font-size: 1.5rem;
+    font-weight: 900;
+    span {
+        color: $accents;
+        font-style: italic;
+        text-shadow: 0 0 5px $white;
+    }
+    &:hover {
+        color: $accents;
+    }
+}
+.links {
+    color: $white;
+    text-transform: uppercase;
+    font-style: italic;
+    i {
+        color: $accents;
+    }
+    &:hover {
+        color: $accents;
+    }
+}
+/*********************
+header
+*********************/
+header {
+    background-image: linear-gradient(to right, rgba($accents, 0.7), rgba($darkBlue, 0.7)), url(../img/header.jpg);
+    @include bgImg(center, cover, no-repeat, 100vh);
+    border-bottom: 3px solid $accents;
+    .topBar {
+        @extend .bars;
+    }
+    nav {
+        background: $black;
+        padding: 20px;
+        @include flex(space-between, center);
+        box-shadow: 0 0 10px $accents;
+        @media(max-width: 768px) {
+            flex-direction: column;
+        }
+        ul {
+            @extend .liste;
+        }
+    }
+    .uvp {
+        @include flex(center, center);
+        flex-direction: column;
+        height: 80vh;
+        h1 {
+            color: $white;
+            font-size: 10rem;
+            @media(max-width: 768px) {
+                font-size: 5rem;
+            }
+        }
+        p {
+            color: $lightGray;
+            font-size: 1.5rem;
+            text-align: center;
+        }
+        button {
+            @include btn;
+        }
+    }
+}
+/*********************
+reviews
+*********************/
+.reviews {
+    background: $darkBlue;
+    padding: $padding;
+    .container {
+        @include flex(space-between, center);
+        flex-wrap: wrap;
+        article {
+            flex: 0 0 30%;
+            @media(max-width: 768px) {
+                flex: 0 0 100%;
+            }
+            h4 {
+                color: $white;
+                span {
+                    color: $accents;
+                }
+            }
+            h2 {
+                color: $white;
+                font-size: 2rem;
+            }
+            p {
+                color: $lightGray;
+                padding: 30px 0;
+            }
+        }
+    }
+}
+/*********************
+news
+*********************/
+.news {
+    padding: $padding;
+    background: linear-gradient(45deg, $pink, $violet);
+    .container {
+        @include flex(space-between, flex-start);
+        flex-wrap: wrap;
+        article {
+            flex: 0 0 70%;
+            @media(max-width: 768px) {
+                flex: 0 0 100%;
+            }
+            h2 {
+                font-size: 3rem;
+                font-style: italic;
+                color: $white;
+                margin-bottom: 30px;
+            }
+            .posts {
+                @include flex(space-between, center);
+                flex-wrap: wrap;
+                margin-bottom: 30px;
+                .featured-image {
+                    flex: 0 0 38%;
+                    @media(max-width: 768px) {
+                        flex: 0 0 100%;
+                    }
+                    img {
+                        width: 100%;
+                    }
+                }
+                .text {
+                    flex: 0 0 58%;
+                    @media(max-width: 768px) {
+                        flex: 0 0 100%;
+                    }
+                    span {
+                        color: $accents;
+                    }
+                    h3 {
+                        font-size: 2rem;
+                    }
+                    p {
+                        color: $lightGray;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+        }
+        aside {
+            flex: 0 0 27%;
+            @media(max-width: 768px) {
+                flex: 0 0 100%;
+            }
+            .widget {
+                padding: 30px;
+                background: $pink;
+                h3 {
+                    font-size: 2rem;
+                }
+                ul {
+                    list-style: none;
+                    li {
+                        line-height: 2;
+                        a {
+                            @extend .links;
+                        }
+                    }
+                }
+                div {
+                    background: $lightGray;
+                    text-align: center;
+                    padding: 20px;
+                    color: $darkBlue;
+                    img {
+                        width: 100%;
+                    }
+                    h2 {
+                        font-size: 2rem;
+                        text-shadow: 0 0 5px $accents;
+                    }
+                    button {
+                        @include btn;
+                    }
+                }
+            }
+        }
+    }
+}
+/*********************
+subscribe
+*********************/
+.subscribe {
+    padding: $padding;
+    text-align: center;
+    background: $lightGray;
+    @media(max-width: 768px) {
+        padding: 30px;
+    }
+    h2 {
+        font-size: 3rem;
+        color: $darkBlue;
+        @media(max-width: 768px) {
+           font-size: 2rem;
+            line-height: 30px;
+        }
+    }
+    input[type="email"] {
+        padding: 13px;
+        width: 400px;
+        background: transparent;
+        border: none;
+        border-bottom: 3px solid $violet;
+        margin-right: 30px;
+        font-size: 1.2rem;
+        text-transform: uppercase;
+        font-style: italic;
+        @media(max-width: 768px) {
+            width: 100%;
+        }
+    }
+    input[type="submit"] {
+        @include btn;
+        @media(max-width: 768px) {
+            width: 100%;
+        }
+    }
+}
+/*********************
+footer
+*********************/
+footer {
+    background: linear-gradient(to right, $violet, $darkBlue);
+    padding: $padding;
+    text-align: center;
+    ul {
+        padding-top: 20px;
+        width: 30%;
+        margin: auto;
+        @extend .liste;
+        @media(max-width: 768px) {
+            width: 90%;
+        }
+    }
+    p {
+        @extend .bars;
+        @include flex(center, center);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
