@@ -1,0 +1,312 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;800&display=swap');
+$fontFamily: 'Open Sans', sans-serif;
+$fontSize: 16px;
+$orange: #f8a055;
+$black: #221f1a;
+$gray: #5a574e;
+$green: #988d51;
+$white:#fff;
+$transition: .4s ease;
+$padding: 70px 0;
+$textShadow: 0 0 2px  $black;
+@mixin flex ($justify, $align, $direction, $wrap){
+    display: flex;
+    justify-content: $justify;
+    align-items:$align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+@mixin bgImg($bgPosition, $bgSize, $height) {
+    background-position: $bgPosition;
+    background-size: $bgSize;
+    height: $height;
+}
+@mixin btn{
+    padding: 15px 30px;
+    background: $orange;
+    border: none;
+    text-transform: uppercase;
+    font-size: .8rem;
+    margin-top: 20px;
+    letter-spacing: 2px;
+    &:hover {
+        cursor: pointer;
+        transition: $transition;
+        background: lighten($orange, 5%);
+    }
+}
+/***************
+basic styles
+***************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    line-height: 1.7;
+    color: $black;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    @media(max-width: 768px) {
+        width: 95%;
+    }
+}
+a {
+    color: $black;
+    text-decoration: none;
+    &:hover {
+        color: $orange;
+        transition: $transition;
+    }
+}
+h2 {
+   font-size: 3rem; 
+    @media(max-width: 768px) {
+        font-size: 2rem; 
+    }
+}
+ul {
+    list-style: none;
+}
+.singleHeaders {
+    background-image: linear-gradient(to right, rgba($white, 0.99), rgba($white, 0.01)), url(../img/header2.jpg);
+    @include bgImg(center, cover, 50vh);
+    @include flex(center, flex-start, column, wrap); 
+    margin-left: 10%;
+    @media(max-width: 768px) {
+        font-size: 2rem;
+        background-image: linear-gradient(to right, rgba($white, 0.99), rgba($white, 0.6)), url(../img/header2.jpg);
+    }
+    h1 {
+        font-size: 3rem;
+        color: $orange;
+        text-shadow: $textShadow;
+        @media(max-width: 768px) {
+            font-size: 2rem;
+        }
+    }
+    button {
+        @include btn;
+    }
+}
+/***************
+nav
+***************/
+nav {
+    .container {
+        @include flex(space-between, center, row, wrap);
+        @media(max-width: 768px) {
+            @include flex(space-between, center, column, wrap);
+        }
+        .logo {
+            color: $orange;
+            font-size: 2rem;
+            font-weight: 800;
+            span {
+                font-weight: 300;
+                color: $black;
+                font-style: italic;
+            }
+        }
+        ul {
+            @include flex(center, center, row, wrap);
+            li {
+                margin-left: 50px;
+                @media(max-width: 768px) {
+                    margin: 10px;
+                }
+            }
+        }
+    }
+}
+/***************
+footer
+***************/
+footer {
+    @include flex(center, stretch, row, wrap);
+    @media(max-width: 768px) {
+        @include flex(center, stretch, column, wrap);
+    }
+    color: $white;
+    article:first-child {
+        flex: 7;
+        background: $gray;
+        padding: 80px;
+        h3 {
+            padding-bottom: 30px;
+        }
+    }
+    article:last-child {
+        flex: 5;
+        background: $orange;
+        padding: 80px;
+        i {
+            text-shadow: $textShadow
+        }
+    }
+}
+.bottomBar {
+    text-align: center;
+    padding: 10px;
+    a {
+        color: $orange;
+        &:hover {
+            color: $black;
+        }
+    }
+}
+/***************
+mainHeader
+***************/
+.mainHeader {
+    background-image: linear-gradient(to right, rgba($white, 0.99), rgba($white, 0.01)), url(../img/header.jpg);
+    @include bgImg(center, cover, 80vh);
+    @include flex(flex-start, center, row, wrap); 
+    div {
+        flex: 0 0 40%;
+        margin-left: 10%;
+        background: linear-gradient(45deg, rgba($white, 0.01), rgba($white, 0.99));
+        padding: 50px;
+        @media(max-width: 768px) {
+            flex: 0 0 100%;
+            margin-left: 0%;
+        }
+        h1 {
+            font-size: 4rem;
+            color: $orange;
+            text-shadow: $textShadow;
+            @media(max-width: 768px) {
+                font-size: 2rem;
+            }
+        }
+        button {
+            @include btn;
+        }
+    }
+}
+/***************
+uvod
+***************/
+.uvod {
+    padding: $padding;
+    @include flex(space-between, center, row, wrap);
+    article {
+        flex: 1;
+        padding: 50px;
+        h2 {
+            font-weight: 800;
+            span {
+                font-weight: 300;
+                font-style: italic;
+            }
+        }
+        h3 {
+            font-size: 5rem;
+            color: $orange;
+            text-shadow: $textShadow;
+        }
+        h4 {
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+        }
+    }
+}
+/***************
+zeleno
+***************/
+.zeleno {
+    padding: $padding;
+    color: $white;
+    background-image: url(../img/bg.jpg);
+    @include bgImg(center, cover, auto);
+    @media(max-width: 768px) {
+        @include bgImg(right, cover, auto);
+    }
+    .container {
+        @include flex(space-between, center, row, wrap);
+        article {
+            flex: 0 0 45%;
+            @media(max-width: 768px) {
+                flex: 0 0 100%;
+            }
+            img {
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            h2 {
+                margin-bottom: 30px;
+            }
+        }
+    }
+}
+/***************
+organic
+***************/
+.organic {
+    @extend .zeleno;
+    background-image: url(../img/bg2.jpg);
+    @media(max-width: 768px) {
+        @include bgImg(bottom, cover, auto);
+    }
+    @media(max-width: 768px) {
+        .container {
+            article:nth-child(2) {
+                @include flex(space-between, center, row, wrap);
+                p {
+                    order: -1;
+                    margin-bottom: 40px;
+                }
+            }
+        }
+    }
+}
+/***************
+poruci
+***************/
+.poruci {
+    @include flex(center, center, row, wrap);
+    color: $white;
+    article:nth-child(1) {
+        background-image: url(../img/poruci1.jpg);
+        @include bgImg(center, cover, 50vh);
+        flex: 1;
+        @media(max-width: 768px) {
+            flex: 0 0 100%;
+        }
+    }
+    article:nth-child(2) {
+        background-image: url(../img/poruci2.jpg);
+        @include bgImg(center, cover, 50vh);
+        flex: 1;
+        @media(max-width: 768px) {
+            flex: 0 0 100%;
+        }
+    }
+    article:nth-child(3) {
+        background: $orange;
+        flex: 1;
+        @include flex(center, center, column, wrap);
+        height: 50vh;
+        text-align: center;
+        @media(max-width: 768px) {
+            flex: 0 0 100%;
+        }
+        button {
+            @include btn;
+            background: $white;
+            &:hover {
+                background: $gray;
+                color: $white;
+            }
+        }
+    }
+}
+
+
+
+
