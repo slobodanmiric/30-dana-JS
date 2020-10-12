@@ -1,0 +1,378 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700;800&display=swap');
+$primary: #4d5198;
+$accents: #ff93cc;
+$darkGray: #292e33;
+$white: #fff;
+$lightGray: lightgray;
+$fontFamily: 'Montserrat', sans-serif;
+$fontSize: 16px;
+$padding: 70px 0;
+$transition: .3s ease;
+$boxShadow: 0 0 10px $lightGray;
+/***************
+mixins
+***************/
+@mixin flex ($justify, $align, $direction, $wrap){
+    display: flex;
+    justify-content: $justify;
+    align-items:$align;
+    flex-direction: $direction;
+    flex-wrap: $wrap;
+}
+@mixin btn {
+    padding: 15px 30px;
+    background: transparent;
+    border: 2px solid $white;
+    color: $white;
+    font-size: 1rem;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    &:hover {
+        cursor: pointer;
+        background: $white;
+        color: $darkGray;
+        transition: $transition;
+    }
+}
+@mixin bgImg($height) {
+    background-position: center;
+    background-size: cover;
+    height: $height;
+}
+/***************
+basic styles
+***************/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    color: $darkGray;
+}
+.container {
+    width: 80%;
+    margin: auto;
+    @media(max-width: 768px) {
+        width: 90%;
+    }
+}
+a {
+    text-decoration: none;
+    &:hover {
+        transition: $transition;
+    }
+}
+ul {
+    list-style: none;
+}
+h2 {
+    font-size: 3rem;
+    @media(max-width: 768px) {
+        font-size: 2rem;
+    }
+}
+.headers {
+    color: $white;
+    background-image: linear-gradient(rgba($darkGray, .7), rgba($darkGray, .7)), url(../img/headers.jpg);
+    @include bgImg(60vh);
+    .container {
+        @include flex(center, flex-end, column, wrap);
+        height: 60vh;
+        @media(max-width: 768px) {
+            @include flex(center, center, column, wrap);
+        }
+        h1 {
+            font-size: 4rem;
+            text-shadow: 0 0 1px $darkGray;
+            @media(max-width: 768px) {
+                font-size: 2.5rem;
+            }
+        }
+        p {
+            font-size: 1.5rem;
+            opacity: .8;
+        }
+        button {
+            @include btn;
+        }
+    }
+}
+/***************
+widget
+***************/
+.widget {
+    @include flex(space-between, flex-start, column, wrap);
+    background: $white;
+    padding: 5px;
+    box-shadow: 0 0 6px $darkGray;
+    position: fixed;
+    top: 40%;
+    font-size: 2rem;
+    @media(max-width: 768px) {
+        display: none;
+    }
+    .fa-facebook-square {
+        color: #3b5998;
+    }
+    .fa-instagram {
+        color: #c13584;
+    }
+    .fa-pinterest {
+        color: #e60023;
+    }
+    .fa-youtube-square {
+        color: #ff0000;
+    }
+}
+/***************
+topBar
+***************/
+.topBar {
+    background: $darkGray;
+    padding: 7px 0;
+    color: $white;
+    .container {
+        @include flex(space-between, center, row, wrap);
+        @media(max-width: 768px) {
+            @include flex(space-between, center, column, wrap);
+        }
+        i {
+            color: $accents;
+        }
+        .icons {
+            i {
+                margin-left: 10px;
+                &:hover {
+                    color: $white;
+                    transition: $transition;
+                }
+            }
+        }
+    }
+}
+
+/***************
+nav
+***************/
+nav {
+    background: $white;
+    .container {
+        @include flex(space-between, center, row, wrap);
+        padding: 10px 0;
+        @media(max-width: 768px) {
+            @include flex(space-between, center, column, wrap);
+        }
+        .logo {
+            color: $accents;
+            text-shadow: 1px 1px $darkGray;
+            font-size: 1.5rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            &:hover {
+                color: $darkGray;
+                text-shadow: $accents;
+            }
+        }
+        ul {
+            @include flex(space-between, center, row, wrap);
+            a {
+                color: $darkGray;
+                margin-left: 50px;
+                font-weight: 700;
+                text-transform: uppercase;
+                @media(max-width: 768px) {
+                    margin: 10px;
+                }
+                &:hover {
+                    color: $accents;
+                }
+            }
+        }
+    }
+}
+/***************
+footer
+***************/
+footer {
+    padding: $padding;
+    background: $darkGray;
+    color: $white;
+    line-height: 1.7;
+    .container {
+        @include flex(space-between, flex-start, row, wrap);
+        article {
+            h3 {
+                color: $accents;
+                font-size: 1.5rem;
+                margin-bottom: 20px;
+            }
+            a {
+                color: $lightGray;
+                &:hover {
+                    color: $accents;
+                }
+            }
+            input[type='email'] {
+                @include btn;
+                width: 50%;
+                &:hover {
+                    cursor: auto;
+                }
+            }
+            input[type='submit'] {
+                @include btn;
+            }
+        }
+        article:nth-child(1) {
+            flex: 0 0 39%;
+            @media(max-width: 768px) {
+                flex: 0 0 100%;
+            }
+        }
+        article:nth-child(2) {
+            flex: 0 0 15%;
+            @media(max-width: 768px) {
+                flex: 0 0 100%;
+            }
+        }
+        article:nth-child(3) {
+            flex: 0 0 39%;
+            @media(max-width: 768px) {
+                flex: 0 0 100%;
+            }
+        }
+    }
+}
+/***************
+mainHeader
+***************/
+.mainHeader {
+    background-image: url(../img/header.jpg);
+    @include bgImg(80vh);
+    @include flex(center, center, column, wrap);
+    color: $white;
+    h1 {
+        font-size: 5rem;
+        text-shadow: 0 0 1px $darkGray;
+        @media(max-width: 768px) {
+            font-size: 3rem;
+            text-align: center;
+            line-height: 50px;
+        }
+    }
+    p {
+        font-size: 1.5rem;
+        opacity: .8;
+    }
+    button {
+        @include btn;
+    }
+}
+/***************
+putovanja
+***************/
+.putovanja {
+    padding: $padding;
+    text-align: center;
+    p {
+        background: $accents;
+        display: inline-block;
+        padding: 5px 40px;
+        box-shadow: $boxShadow;
+        margin: 20px 0 30px 0;
+        font-weight: 800;
+        color: $white;
+        text-shadow: 0 0 2px $darkGray;
+    }
+    .container {
+        @include flex(space-between, center, row, wrap);
+        article {
+            flex: 0 0 30%;
+            box-shadow: $boxShadow;
+            margin-bottom: 80px;
+            @media(max-width: 768px) {
+                flex: 0 0 100%;
+                margin-bottom: 40px;
+            }
+            img {
+                width: 100%;
+                display: block;
+            }
+            .text {
+                padding: 10px;
+                i {
+                    color: $accents;
+                }
+            }
+        }
+    }
+}
+/***************
+ponuda
+***************/
+.ponuda {
+    padding: $padding;
+    text-align: center;
+    .container {
+        @include flex(space-between, center, row, wrap);
+        box-shadow: $boxShadow;
+        margin-top: 30px;
+        article:first-child {
+            background-image: url(../img/ponuda1.jpg);
+            @include bgImg(80vh);
+            flex: 0 0 50%;
+            @media(max-width: 768px) {
+                flex: 0 0 100%;
+                @include bgImg(40vh);
+            }
+        }
+        article:last-child {
+            height: 80vh;
+            flex: 0 0 50%;
+            @include flex(space-between, center, row, wrap);
+            @media(max-width: 768px) {
+                flex: 0 0 100%;
+                height: auto;
+            }
+            div {
+                flex: 0 0 50%;
+                height: 40vh;
+                @media(max-width: 768px) {
+                    flex: 0 0 100%;
+                    height: auto;
+                }
+                h3 {
+                    margin-bottom: 20px;
+                    color: $accents;
+                    font-size: 1.5rem;
+                    text-shadow: 0 0 1px $darkGray;
+                }
+            }
+            div:nth-child(2), div:nth-child(3) {
+                @include flex(center, center, column, wrap);
+                padding: 30px;
+            }
+            @media(max-width: 768px) {
+                div:nth-child(2) {
+                    order: -1;
+                }
+            }
+        }
+        article:last-child div:nth-child(1) {
+            background-image: url(../img/ponuda2.jpg);
+            @include bgImg(40vh);
+        }
+        article:last-child div:nth-child(4) {
+            background-image: url(../img/ponuda3.jpg);
+            @include bgImg(40vh);
+        }
+    }
+}
+
+
+
+
