@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap");
+/*****************
+mixins
+*****************/
+/*****************
+basic styles
+*****************/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 16px;
+  font-family: "Montserrat", sans-serif;
+  color: #000000;
+}
+
+.container {
+  max-width: 1140px;
+  margin: auto;
+}
+
+/*****************
+nav
+*****************/
+nav {
+  background: #313131;
+  color: #fff;
+  padding: 10px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+nav div:nth-child(1) {
+  flex: 1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+nav div:nth-child(1) img {
+  width: 80px;
+}
+nav div:nth-child(1) a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  margin-left: 20px;
+  font-size: 1.3rem;
+}
+nav div:nth-child(1) a:hover {
+  color: #d3d3d3;
+}
+nav div:nth-child(2) {
+  flex: 1;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+nav div:nth-child(2) p {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+nav div:nth-child(3) {
+  flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+nav div:nth-child(3) button {
+  padding: 15px 30px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  text-transform: none;
+  font-size: 1rem;
+  border-radius: 3px;
+}
+nav div:nth-child(3) button:hover {
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid #fff;
+  color: #313131;
+  transition: 0.4s ease;
+}
+
+/*****************
+mainHeader
+*****************/
+.mainHeader {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(../img/header.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 80vh;
+  background-position: center;
+  background-size: cover;
+  color: #fff;
+}
+.mainHeader h1 {
+  font-size: 3rem;
+}
+.mainHeader p {
+  text-align: center;
+  padding: 30px 0;
+}
+.mainHeader div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.mainHeader div button:nth-child(1) {
+  padding: 15px 30px;
+  background: #506df5;
+  border: 2px solid #506df5;
+  color: #fff;
+  text-transform: none;
+  font-size: 1rem;
+  border-radius: 3px;
+  margin-right: 10px;
+}
+.mainHeader div button:nth-child(1):hover {
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid #fff;
+  color: #313131;
+  transition: 0.4s ease;
+}
+.mainHeader div button:nth-child(1):hover {
+  background: transparent;
+  color: #506df5;
+  border: 2px solid #506df5;
+}
+.mainHeader div button:nth-child(2) {
+  padding: 15px 30px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  text-transform: none;
+  font-size: 1rem;
+  border-radius: 3px;
+  margin-left: 10px;
+}
+.mainHeader div button:nth-child(2):hover {
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid #fff;
+  color: #313131;
+  transition: 0.4s ease;
+}
+
+/*****************
+pricing
+*****************/
+.pricing {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.pricing article {
+  flex: 1;
+  text-align: center;
+  border: 1px solid #d3d3d3;
+  padding: 2rem;
+}
+.pricing article:hover {
+  transform: scale(1.1);
+  transition-duration: 0.2s;
+  background: #fff;
+}
+.pricing article h2 {
+  font-size: 2.5rem;
+  font-weight: 300;
+}
+.pricing article .prvi {
+  color: #012f5b;
+  font-size: 2rem;
+}
+.pricing article .drugi {
+  color: #012f5b;
+  font-size: 5rem;
+  font-weight: 300;
+}
+.pricing article .treci {
+  color: #585858;
+  font-size: 1.1rem;
+}
+.pricing article p {
+  color: #585858;
+  padding: 30px 0;
+  font-size: 0.8rem;
+}
+.pricing article button {
+  padding: 15px 30px;
+  background: transparent;
+  border: 2px solid #506df5;
+  color: #506df5;
+  text-transform: transparent;
+  font-size: 1rem;
+  border-radius: 3px;
+}
+.pricing article button:hover {
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid #fff;
+  color: #313131;
+  transition: 0.4s ease;
+}
+.pricing article button:hover {
+  background: #506df5;
+  color: #fff;
+  border: 2px solid #506df5;
+}
+
+/*# sourceMappingURL=style.css.map */
