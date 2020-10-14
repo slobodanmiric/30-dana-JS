@@ -1,4 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;600;700&display=swap");
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap");
 /*****************
 mixins
 *****************/
@@ -15,6 +16,7 @@ body {
   font-size: 16px;
   font-family: "Montserrat", sans-serif;
   color: #000000;
+  background: #f7f7f7;
 }
 
 .container {
@@ -227,6 +229,398 @@ pricing
   background: #506df5;
   color: #fff;
   border: 2px solid #506df5;
+}
+
+/*****************
+.advantages
+*****************/
+.advantages {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../img/bg2.jpg);
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  padding: 110px 0 150px 0;
+}
+.advantages h2 {
+  font-size: 5rem;
+  font-weight: 600;
+  text-align: center;
+  color: #fff;
+}
+.advantages hr {
+  background: #fde21c;
+  width: 150px;
+  height: 4px;
+  border: none;
+  margin: 0 auto 50px auto;
+}
+.advantages .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.advantages .container article {
+  flex: 0 0 30%;
+  background: #fff;
+  border-radius: 10px;
+  border: 1px solid #d3d3d3;
+}
+.advantages .container article img {
+  width: 100%;
+  border-radius: 10px 10px 0 0;
+}
+.advantages .container article .text {
+  padding: 30px;
+}
+.advantages .container article .text h3 {
+  font-weight: 500;
+  font-size: 1.4rem;
+}
+.advantages .container article .text p {
+  color: #585858;
+  padding: 20px 0;
+  font-size: 0.8rem;
+}
+.advantages .container article .text button {
+  padding: 15px 30px;
+  background: transparent;
+  border: 2px solid #506df5;
+  color: #506df5;
+  text-transform: transparent;
+  font-size: 1rem;
+  border-radius: 3px;
+}
+.advantages .container article .text button:hover {
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid #fff;
+  color: #313131;
+  transition: 0.4s ease;
+}
+.advantages .container article .text button:hover {
+  background: #506df5;
+  color: #fff;
+  border: 2px solid #506df5;
+}
+
+/*****************
+team
+*****************/
+.team {
+  padding: 4rem 0;
+}
+.team h2 {
+  font-size: 5rem;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 40px;
+}
+.team .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.team .container article {
+  flex: 0 0 48%;
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-bottom: 50px;
+  box-shadow: 0 0 30px #d3d3d3;
+}
+.team .container article:hover {
+  box-shadow: 0 0 50px #bababa;
+}
+.team .container article div:first-child {
+  flex: 0 0 50%;
+  background: #fff;
+  padding: 30px;
+}
+.team .container article div:first-child h4 {
+  font-size: 1.4rem;
+  font-weight: 500;
+}
+.team .container article div:first-child h5 {
+  font-weight: 300;
+  font-size: 1.1rem;
+}
+.team .container article div:first-child p {
+  font-size: 0.8rem;
+  padding: 15px 0;
+}
+.team .container article div:first-child i {
+  color: #fd830f;
+  font-size: 1.3rem;
+}
+.team .container article div:last-child {
+  flex: 0 0 50%;
+}
+.team .container article div:last-child img {
+  width: 100%;
+  display: block;
+}
+
+/*****************
+services
+*****************/
+.services {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/bg2.jpg);
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  padding: 100px 0;
+  color: #fff;
+}
+.services .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.services .container article {
+  flex: 0 0 49%;
+}
+.services .container article:first-child {
+  border: 1px solid #d3d3d3;
+  padding: 50px;
+  text-align: center;
+}
+.services .container article:first-child h2 {
+  margin-top: 30px;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+.services .container article:first-child p {
+  padding: 30px;
+}
+.services .container article:first-child i {
+  font-size: 6rem;
+  color: #fde21c;
+}
+.services .container article:first-child button {
+  padding: 15px 30px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  text-transform: none;
+  font-size: 1rem;
+  border-radius: 3px;
+}
+.services .container article:first-child button:hover {
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid #fff;
+  color: #313131;
+  transition: 0.4s ease;
+}
+.services .container article:last-child {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.services .container article:last-child div {
+  padding: 50px;
+}
+
+/*****************
+work
+*****************/
+.work {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 4rem 0;
+}
+.work article {
+  flex: 0 0 32%;
+  line-height: 1.6;
+  font-size: 0.8;
+  font-weight: 400;
+}
+.work article:first-child {
+  align-self: center;
+}
+.work article:first-child h2 {
+  font-size: 2.5rem;
+  font-weight: 500;
+  line-height: 50px;
+}
+
+/*****************
+cta
+*****************/
+.cta {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: #313131;
+}
+.cta button:nth-child(1) {
+  padding: 15px 30px;
+  background: #fde21c;
+  border: 2px solid #fde21c;
+  color: #313131;
+  text-transform: none;
+  font-size: 1rem;
+  border-radius: 3px;
+}
+.cta button:nth-child(1):hover {
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid #fff;
+  color: #313131;
+  transition: 0.4s ease;
+}
+.cta button:nth-child(1):hover {
+  background: transparent;
+  color: #fde21c;
+  border: 2px solid #fde21c;
+}
+.cta button:nth-child(2) {
+  padding: 15px 30px;
+  background: transparent;
+  border: 2px solid #fff;
+  color: #fff;
+  text-transform: none;
+  font-size: 1rem;
+  border-radius: 3px;
+  margin: 0 10px;
+}
+.cta button:nth-child(2):hover {
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid #fff;
+  color: #313131;
+  transition: 0.4s ease;
+}
+.cta button:nth-child(3) {
+  padding: 15px 30px;
+  background: #506df5;
+  border: 2px solid #506df5;
+  color: #fff;
+  text-transform: none;
+  font-size: 1rem;
+  border-radius: 3px;
+}
+.cta button:nth-child(3):hover {
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid #fff;
+  color: #313131;
+  transition: 0.4s ease;
+}
+.cta button:nth-child(3):hover {
+  background: transparent;
+  color: #506df5;
+  border: 2px solid #506df5;
+}
+
+/*****************
+footer
+*****************/
+footer {
+  padding: 4rem 0;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+footer article {
+  flex: 1;
+  line-height: 1.7;
+}
+footer article form {
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-right: 30px;
+}
+footer article form input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px dotted #d3d3d3;
+}
+footer article form textarea {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px dotted #d3d3d3;
+}
+footer article form button {
+  padding: 15px 30px;
+  background: #fde21c;
+  border: 2px solid #fde21c;
+  color: #313131;
+  text-transform: none;
+  font-size: 1rem;
+  border-radius: 3px;
+  width: 60%;
+  margin: auto;
+  display: block;
+}
+footer article form button:hover {
+  cursor: pointer;
+  background: #fff;
+  border: 2px solid #fff;
+  color: #313131;
+  transition: 0.4s ease;
+}
+footer article form button:hover {
+  background: transparent;
+  color: #fde21c;
+  border: 2px solid #fde21c;
+}
+footer article img {
+  width: 30%;
+}
+footer article ul li {
+  list-style: none;
+}
+footer article ul li::before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  content: "";
+  font-size: 0.7rem;
+  color: #012f5b;
+  margin-right: 20px;
+}
+footer article h4 {
+  margin-bottom: 30px;
+}
+footer article:last-child p {
+  margin-bottom: 10px;
+}
+footer article:last-child .prvi {
+  font-size: 0.8rem;
+  padding: 10px 0;
+}
+footer article:last-child i {
+  color: #012f5b;
+  margin-right: 15px;
+}
+
+.bottomBar {
+  padding: 50px 0;
+  background: #313131;
+  text-align: center;
+  color: #fff;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=style.css.map */
