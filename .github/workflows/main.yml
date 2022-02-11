@@ -16,4 +16,4 @@ jobs:
         id: carbonate
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          imgur-client-id: ${{ secrets.IMGUR_CLIENT_ID }}
+          imgur-client-id: ${{ secrets.dfeacfd02acd9b9 }}
